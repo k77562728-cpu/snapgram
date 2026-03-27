@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    --background: 0.16 0.022 252;
+    --foreground: 0.97 0 0;
+    --card: 0.18 0.022 252;
+    --card-foreground: 0.97 0 0;
+    --popover: 0.2 0.022 252;
+    --popover-foreground: 0.97 0 0;
+    --primary: 0.623 0.214 254;
+    --primary-foreground: 0.97 0 0;
+    --secondary: 0.22 0.015 252;
+    --secondary-foreground: 0.85 0 0;
+    --muted: 0.22 0.015 252;
+    --muted-foreground: 0.6 0.01 252;
+    --accent: 0.585 0.22 270;
+    --accent-foreground: 0.97 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.97 0 0;
+    --border: 0.28 0.015 252;
+    --input: 0.25 0.015 252;
+    --ring: 0.623 0.214 254;
+    --chart-1: 0.623 0.214 254;
+    --chart-2: 0.696 0.17 162.48;
+    --chart-3: 0.769 0.188 70.08;
+    --chart-4: 0.65 0.25 330;
+    --chart-5: 0.585 0.22 270;
+    --sidebar: 0.18 0.022 252;
+    --sidebar-foreground: 0.97 0 0;
+    --sidebar-primary: 0.623 0.214 254;
+    --sidebar-primary-foreground: 0.97 0 0;
+    --sidebar-accent: 0.22 0.015 252;
+    --sidebar-accent-foreground: 0.85 0 0;
+    --sidebar-border: 0.28 0.015 252;
+    --sidebar-ring: 0.623 0.214 254;
+  }
+
+  .dark {
+    --background: 0.12 0.02 252;
+    --foreground: 0.97 0 0;
+    --card: 0.16 0.02 252;
+    --card-foreground: 0.97 0 0;
+    --popover: 0.18 0.022 252;
+    --popover-foreground: 0.97 0 0;
+    --primary: 0.623 0.214 254;
+    --primary-foreground: 0.97 0 0;
+    --secondary: 0.2 0.015 252;
+    --secondary-foreground: 0.85 0 0;
+    --muted: 0.2 0.015 252;
+    --muted-foreground: 0.6 0.01 252;
+    --accent: 0.585 0.22 270;
+    --accent-foreground: 0.97 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.97 0 0;
+    --border: 0.25 0.015 252;
+    --input: 0.22 0.015 252;
+    --ring: 0.623 0.214 254;
+    --chart-1: 0.623 0.214 254;
+    --chart-2: 0.696 0.17 162.48;
+    --chart-3: 0.769 0.188 70.08;
+    --chart-4: 0.65 0.25 330;
+    --chart-5: 0.585 0.22 270;
+    --sidebar: 0.16 0.022 252;
+    --sidebar-foreground: 0.97 0 0;
+    --sidebar-primary: 0.623 0.214 254;
+    --sidebar-primary-foreground: 0.97 0 0;
+    --sidebar-accent: 0.2 0.015 252;
+    --sidebar-accent-foreground: 0.85 0 0;
+    --sidebar-border: 0.25 0.015 252;
+    --sidebar-ring: 0.623 0.214 254;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background: linear-gradient(180deg, #0b1220 0%, #060a12 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scrollbar-width: none;
+  }
+  .snap-container::-webkit-scrollbar {
+    display: none;
+  }
+  .snap-item {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  .gradient-brand {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6, #3b82f6);
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .like-pulse {
+    animation: like-pulse 0.4s ease-out;
+  }
+  @keyframes like-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
